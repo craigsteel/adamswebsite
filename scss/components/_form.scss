@@ -1,0 +1,138 @@
+.header {
+  &__contact {
+    width: 100%;
+  }
+}
+
+.main-area {
+  margin: 2em auto;
+
+  &__form {
+    display: block;
+
+    &--heading {
+      font-size: 18px;
+      padding: 0;
+    }
+
+
+    &--button {
+      text-align: center;
+      padding: 0;
+    }
+  }
+
+  .content-form,
+  .top-form,
+  .middle-form,
+  .bottom-form {
+    width: 100%;
+    min-height: 65px;
+    margin: 10px 0;
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: solid 1px rgba($color-black, 0.3);
+      letter-spacing: 0.5px;
+      font-family: inherit;
+      font-weight: 300;
+      font-size: 0.8rem;
+      margin-bottom: 1em;
+    }
+  }
+
+  .inner-form {
+    width: 49%;
+    float: left;
+    margin-right: 2%;
+  }
+
+  .inner-form:last-child {
+    margin-right: 0;
+  }
+
+  .middle-form {
+    clear: both;
+  }
+
+  .bottom-form {
+    &__inner {
+      width: 100%;
+    }
+  }
+
+  textarea {
+    height: 120px;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid rgba($color-black, 0.2);
+  }
+}
+
+.label {
+  @include font-size(12px, 15px, 1px);
+  font-family: inherit;
+  text-align: left;
+  padding: 10px 0;
+}
+
+.form-control {
+  margin-bottom: 2em;
+
+  &__example {
+    color: $color-light;
+    @include font-size(10px, 24px, 0);
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  .main-area {
+    &__form {
+      margin: 0 0;
+      padding: 1% 4%;
+
+      &--heading {
+        font-size: 17px;
+      }
+
+      &--button {
+        padding: 40px 0;
+      }
+    }
+
+    .top-form,
+    .middle-form,
+    .bottom-form {
+      width: 100%;
+      min-height: 65px;
+      margin: 10px 0;
+    }
+
+    .inner-form {
+      width: 100%;
+      margin-bottom: 5%;
+      display: block;
+      margin-right: 2%;
+    }
+
+    .inner-form:last-child {
+      margin-right: 0;
+    }
+
+    textarea {
+      height: 120px;
+      width: 100%;
+    }
+  }
+
+  .label {
+    color: rgba(41, 48, 70, 0.7);
+    font-family: Lato;
+    font-weight: 300;
+    padding: 0 0 5px 0;
+    letter-spacing: 1px;
+    font-size: 1.3em;
+  }
+}

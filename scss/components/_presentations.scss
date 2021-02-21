@@ -1,0 +1,106 @@
+.presentations {
+  @include background-block;
+
+  @media screen and (min-width: $md) {
+    @include background((
+      'gradient': (to left, (#009de100, #001638)),
+      'image': 'home-pres.webp',
+      'bg-position': right
+    ));
+    background-size: cover;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2em 0;
+    margin: 2em;
+    border-radius: 5px;
+  }
+
+  &__intro {
+    margin-bottom: 0;
+
+    @media screen and (min-width: $md) {
+      margin-bottom: 1em;
+    }
+  }
+
+  &__cards {
+    margin: 0 auto;
+    width: 100%;
+
+    @media screen and (min-width: $md) {
+      margin: 0 0 1em 3em;
+    }
+
+    &--center {
+      justify-content: center;
+      margin: 0 auto;
+
+      @media screen and (min-width: $md) {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__card {
+    width: 317px;
+    height: auto;
+    margin: 1.2em auto;
+    box-shadow: 0 0 40px 10px rgba($color-black, 0.4);
+
+    @media screen and (min-width: $md) {
+      width: 317px;
+      height: 317px;
+      margin: 1.2em;
+    }
+  }
+
+  .card {
+    &__link {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      position: relative;
+      margin: 1em 0 -3em;
+
+      @media screen and (min-width: $md) {
+        justify-content: flex-start;
+        flex-direction: row;
+        position: absolute;
+        bottom: 1em;
+        left: 0;
+        margin: 0;
+      }
+    }
+
+    &__text {
+      p {
+        @include font-size(12px, 18px, 1px);
+      }
+    }
+
+    &__link-more {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-end;
+      width: 11em;
+    }
+
+    &__link-slides,
+    &__link-pdf {
+      width: 6em;
+
+      @media screen and (min-width: $md) {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-evenly;
+        flex-direction: column;
+        width: 8.5em;
+      }
+
+      img {
+        width: 5em;
+        margin-right: 1em;
+      }
+    }
+  }
+}

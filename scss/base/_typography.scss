@@ -1,0 +1,88 @@
+p {
+  @include font-smoothing;
+  @include font-size(16px, 20px, 1px);
+  font-family: sfmonolight, sans-serif, Helvetica, sans-serif;
+  margin-bottom: 20px;
+}
+
+a {
+  color: $color-green;
+  font-family: sfmonolight, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .4s;
+
+  &:hover {
+    transition: all 0.2s;
+    color: $color-blue;
+  }
+}
+
+h1 {
+  @include text-shadow (-1px, 1px, 3px, rgba($color-black, 1), 0, 0, 30px, rgba($color-magenta, 1), -2px, -2px, 20px, rgba($color-magenta, .7), 2px, 2px, 15px, rgba($color-magenta, .4));
+  @include font-size(35px, 40px, 2px);
+  @include font-smoothing;
+  color: $color-magenta;
+  font-family: lunasolregular, Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto;
+  width: 100%;
+}
+
+h2 {
+  @include text-shadow (-1px, 1px, 3px, rgba($color-black, 1), 0, 0, 30px, rgba($color-magenta, 1), -2px, -2px, 20px, rgba($color-magenta, .7), 2px, 2px, 15px, rgba($color-magenta, .4));
+  @include font-size(33px, 40px, 2px);
+  @include font-smoothing;
+  color: $color-magenta;
+  font-family: lunasolregular, Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+h3 {
+  @include font-size(19px, 25px, 1px);
+  @include font-smoothing;
+  font-family: sfmonolight, Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: $color-green;
+  width: 100%;
+
+  @media screen and (min-width: $sm) {
+    @include font-size(16px, 20px, 1px);
+    margin: 1em;
+  }
+}
+
+h4 {
+  @include font-size(18px, 22px, 1px);
+  @include font-smoothing;
+  text-align: left;
+  color: $color-text;
+  font-family: sfmonolight, Arial, Helvetica, sans-serif;
+  margin-top: 1em;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $sm) {
+    @include font-size(13px, 20px, 1px);
+  }
+}
+
+h5 {
+  @include font-size(18px, 20px, 1px);
+  @include font-smoothing;
+  text-transform: uppercase;
+  font-family: sfmonolight, Arial, Helvetica, sans-serif;
+  padding: 1em 0;
+  letter-spacing: 2px;
+
+  @media screen and (min-width: $sm) {
+    @include font-size(13px, 20px, 1px);
+  }
+}
+
+b {
+  font-family: sfmonobold, Arial, Helvetica, sans-serif;
+  @include font-smoothing;
+}

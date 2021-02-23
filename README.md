@@ -11,7 +11,6 @@ These instructions will get you a copy of the project up and running on your loc
 * NPM
 * NodeJS
 * Gulp.js
-* ejs (templating language)
 
 ### Installing
 
@@ -38,7 +37,7 @@ npm start
 gulp
 ```
 
-* Compress images and move to public folder/images/webp.
+* Compress images and move to public folder/images.
 * Move fonts to public folder
 * Create svg sprite in public folder/images/svgs.
 
@@ -55,4 +54,5 @@ The `public/` folder will contain the generated website
 ## Authors
 
 The initial design was created under contract by - [Craig Steel Design](https://craigsteel-design.com)
+
 # adamswebsite

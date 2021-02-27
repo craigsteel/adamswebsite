@@ -40,14 +40,6 @@ If you want to run a copy of the website locally with support for a live-editing
 gulp watch
 ```
 
-* Starts live server
-* Compile scss to compress css and move to public folder/stylesheets/style.css.
-* Watch for changes
-
-```bash
-gulp
-```
-
 ## Authors
 
 The initial design was created under contract by - [Craig Steel Design](https://craigsteel-design.com)

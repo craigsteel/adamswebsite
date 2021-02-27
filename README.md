@@ -1,4 +1,4 @@
-# Adam Retter App
+# Adam Retter Website
 
 These are the files that generate the http://www.adamretter.org.uk website.
 
@@ -8,9 +8,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Requirements
 
-* NPM
-* NodeJS
-* Gulp.js
+* NodeJS 10.16+
+* NPM 6.14+
 
 ### Installing
 
@@ -23,10 +22,22 @@ cd adamswebsite
 npm install
 ```
 
-### Running
+### Building
+
+If you want to build a distribution for uploading to the webserver you can run:
 
 ```bash
-npm start
+gulp
+```
+
+The `dist/` folder will contain the generated website, which was built from the `src/` folder.### Running
+
+### Running
+
+If you want to run a copy of the website locally with support for a live-editing-update loop, run:
+
+```bash
+gulp watch
 ```
 
 * Starts live server
@@ -37,22 +48,6 @@ npm start
 gulp
 ```
 
-* Compress images and move to public folder/images.
-* Move fonts to public folder
-* Create svg sprite in public folder/images/svgs.
-
-### Building
-
-If you want to build a distribution for uploading to the webserver you can run:
-
-```bash
-npm run build
-```
-
-The `public/` folder will contain the generated website
-
 ## Authors
 
 The initial design was created under contract by - [Craig Steel Design](https://craigsteel-design.com)
-
-# adamswebsite

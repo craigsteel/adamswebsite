@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const { src, dest, parallel } = require('gulp');
 const replace = require('gulp-replace');
 
@@ -12,36 +13,37 @@ function htmlFn() {
     .pipe(dest(DIST_PATH));
 }
 
-// copy the Technical Reports
-function techReportsFn() {
-  return src(SRC_PATH + "/technical-reports*/**/*", { ignore: "**/*.html" })
+// copy the Fonts
+function fontsFn() {
+  return src(SRC_PATH + "/webfontkit*/**/*")
     .pipe(dest(DIST_PATH));
 }
 
 // copy the Publications
-function publicationsFn() {
-  return src(SRC_PATH + "/publications*/**/*", { ignore: "**/*.html" })
+function cvFn() {
+  return src(SRC_PATH + "/cv*/**/*")
     .pipe(dest(DIST_PATH));
 }
 
-// copy the Jobs
-function jobsFn() {
-  return src(SRC_PATH + "/jobs*/**/*", { ignore: "**/*.html" })
+// copy the Publications
+function presentationsFn() {
+  return src(SRC_PATH + "/presentations*/**/*")
     .pipe(dest(DIST_PATH));
 }
 
-// other static resorces
+// other static resources
 function othersFn() {
   return src(SRC_PATH + "/LICENSE.txt")
     .pipe(dest(DIST_PATH));
 }
 
+// eslint-disable-next-line no-undef
 staticsFn = parallel(
-    htmlFn,
-    techReportsFn,
-    publicationsFn,
-    jobsFn,
-    othersFn
+  fontsFn,
+  cvFn,
+  htmlFn,
+  presentationsFn,
+  othersFn
 );
 
 exports.build = staticsFn;

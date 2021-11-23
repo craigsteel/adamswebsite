@@ -14,7 +14,6 @@ function imagesFn() {
   return src(IMAGES_PATH)
     .pipe(imagemin(
       [
-        imagemin.gifsicle(),
         imagemin.mozjpeg(),
         imagemin.optipng(),
         imagemin.svgo(),
